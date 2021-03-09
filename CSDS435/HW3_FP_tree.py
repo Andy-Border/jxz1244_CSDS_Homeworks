@@ -11,10 +11,6 @@ class FP_Node:
         self._children = {}
 
     def add(self, child):
-        '''
-        :param child: _children dict add child & parent -> self
-        :return:
-        '''
         if child.item not in self._children:
             self._children[child.item] = child
             child.parent = self
@@ -78,10 +74,6 @@ class FP_Tree:
             point = next_node
 
     def update_route(self, point):
-        '''
-        :param point:
-        :return:
-        '''
         try:
             route = self._route[point.item]
             route[1].neighbor = point
